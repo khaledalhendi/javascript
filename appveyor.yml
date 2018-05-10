@@ -1,7 +1,7 @@
 #test against this version Noje.js 
 environment:
 	matrix:
-		-nodejs_version: "6"
+		- nodejs_version: "6"
 
 	#install:
 		#Get the latest stable version of Node.js or io.js
