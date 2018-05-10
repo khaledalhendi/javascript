@@ -1,0 +1,24 @@
+#test against this version Noje.js 
+environment:
+	matrix:
+		-nodejs_version: "6"
+
+	#install:
+		#Get the latest stable version of Node.js or io.js
+		- ps: Install-Product node $env:nodejs_version
+
+		#Install modules
+		- npm install
+
+	#Post-install test scripts
+	test_script:
+		#output useful info for debugging 
+		- node --version 
+		- npm --version 
+
+		#run tests
+		- npm test
+
+	# Dont build 
+	build: off
+
