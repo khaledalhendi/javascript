@@ -1,4 +1,6 @@
+/* eslint-disable  no-debugger, no-unused-vars */
 import index from './index.css'
+
 
 import numeral from 'numeral'; 
 
