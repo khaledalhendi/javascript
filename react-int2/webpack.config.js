@@ -1,13 +1,15 @@
 const path = require("path");
 
 const config = (module.exports = {
-  entry: "./src/components/index.js",
+  entry: ["babel-polyfill", "./src/components/index.jsx"],
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "bundle.js"
   },
   module: {
-    rules: [{ test: /\.(js|jsx)$/, use: "babel-loader" }]
+    rules: [
+      { test: /\.(js|jsx)$/, exclude: /node_modules/, use: "babel-loader" }
+    ]
   }
 });
 
