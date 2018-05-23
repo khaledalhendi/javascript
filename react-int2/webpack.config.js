@@ -1,7 +1,7 @@
 const path = require("path");
 
 const config = (module.exports = {
-  entry: ["babel-polyfill", "./src/components/index.jsx"],
+  entry: ["babel-polyfill", "./src/components/index.js"],
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "bundle.js"

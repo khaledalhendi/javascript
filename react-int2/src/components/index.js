@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import DataApi from "../DataApi";
 import { data } from "../testData";
+import ArticleList from "./ArticleList";
 
 const api = new DataApi(data);
 
@@ -11,14 +12,21 @@ class App extends React.Component {
 
     this.state = {
       articles: api.getArticles(),
-      authers: api.getAuthors()
+      authors: api.getAuthors()
     };
   }
 
-  async componentDidMount() {}
+  articleActions = {
+    lookupAuthor: authorId => this.state.authors[authorId]
+  };
 
   render() {
-    return <h2>Hello React</h2>;
+    return (
+      <ArticleList
+        articles={this.state.articles}
+        articleActions={this.articleActions}
+      />
+    );
   }
 }
 

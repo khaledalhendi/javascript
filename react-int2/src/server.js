@@ -7,7 +7,11 @@ app.use(express.static("dist"));
 app.set("view engine", "ejs");
 
 app.get("/", (req, res) => {
-  res.render("index", { answer: 42 });
+  res.render("index");
+});
+
+app.on("listening", function() {
+  console.log("ok, server is running on port: ${config.port}");
 });
 
 app.listen(config.port, () => {

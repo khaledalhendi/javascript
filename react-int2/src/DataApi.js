@@ -4,7 +4,7 @@ class DataApi {
   }
 
   mapIntoObj(arr) {
-    console.log(arr);
+    //console.log(arr);
     return arr.reduce((acc, curr) => {
       acc[curr.id] = curr;
       return acc;
