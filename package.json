@@ -7,6 +7,7 @@
     "webpack": "^4.8.3"
   },
   "devDependencies": {
+    "jest": "^22.4.4",
     "webpack-cli": "^2.1.3"
   }
 }
