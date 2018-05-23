@@ -1,21 +1,24 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import DataApi from "../DataApi";
+import { data } from "../testData";
+
+const api = new DataApi(data);
 
 class App extends React.Component {
-  state = {
-    answer: 42
-  };
+  constructor(props) {
+    super(props);
 
-  asyncFunc = () => {
-    return Promise.resolve(37);
-  };
-
-  async componentDidMount() {
-    this.setState({ answer: await this.asyncFunc() });
+    this.state = {
+      articles: api.getArticles(),
+      authers: api.getAuthors()
+    };
   }
 
+  async componentDidMount() {}
+
   render() {
-    return <h2>Hello React -- {this.state.answer}</h2>;
+    return <h2>Hello React</h2>;
   }
 }
 

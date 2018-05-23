@@ -14,7 +14,7 @@ class DataApi {
     return this.mapIntoObj(this.rawData.articles);
   }
 
-  getAuthers() {
+  getAuthors() {
     return this.mapIntoObj(this.rawData.authors);
   }
 }
