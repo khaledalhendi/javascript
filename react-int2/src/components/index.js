@@ -30,4 +30,8 @@ class App extends React.Component {
   }
 }
 
-ReactDOM.render(<App />, document.getElementById("app"));
+if (typeof window !== 'undefined') {
+  ReactDOM.hydrate(<App />, document.getElementById("app"));
+}
+
+export default App;

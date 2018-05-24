@@ -12,7 +12,7 @@ const styles = {
     fontwWeight: "bold"
   },
   date: {
-    fontSize: "0.85em",
+    fontSize: "0.8em",
     color: "#888"
   },
   author: {
